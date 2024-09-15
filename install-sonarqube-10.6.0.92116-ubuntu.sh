@@ -13,6 +13,7 @@ sudo apt-get update -y > /dev/null 2>&1
 sudo apt-get install -y openjdk-17-jdk unzip > /dev/null 2>&1
 echo "            -> Done"
 
+sudo apt-get update -y > /dev/null 2>&1
 # Downloading SonarQube 10.6.0.92116 version to OPT folder
 echo "*****Downloading SonarQube 10.6.0.92116 version"
 cd /opt 
@@ -32,6 +33,7 @@ echo "*****Starting SonarQube Server"
 cd /opt
 sudo su -m ubuntu -c "./sonarqube/sonarqube-10.6.0.92116/bin/linux-x86-64/sonar.sh start 1>/dev/null"
 
+sudo apt-get update -y > /dev/null 2>&1
 
 # Check if SonarQube is working
 echo "\n################################################################ \n"
